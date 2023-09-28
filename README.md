@@ -1,2 +1,2 @@
-# portale-ausl-manager
-Interfaccia grafica per AUSL e gestione degli utenti
+# Portale AUSL (Pari o dispari)
+Interfaccia grafica per AUSL, gestione dell'utenza e caricamento dei menu approvati.
