@@ -14,11 +14,11 @@ export default function LoginForm(){
                     </h1>
                     <div className="flex w-full flex-col mt-6">
                         <label className="text-lg text-orange-500">Email:</label>
-                        <input className="p-3 outline-orange-400 rounded-lg" id="emailField" type="email" placeholder="esempio@dominio.it"/>
+                        <input required className="p-3 outline-orange-400 rounded-lg" id="emailField" type="email" placeholder="esempio@dominio.it"/>
                     </div>
                     <div className="flex w-full flex-col mt-3">
                         <label className="text-lg text-orange-500">Password:</label>
-                        <input  maxLength={20} className="p-3 rounded-lg outline-orange-400" id="passwordField" type="password" placeholder="Massimo 20 caratteri"/>
+                        <input required maxLength={20} className="p-3 rounded-lg outline-orange-400" id="passwordField" type="password" placeholder="Massimo 20 caratteri"/>
                     </div>
                     <input value={"Accedi"} className="mt-10 w-3/4 hover:bg-amber-500 text-white bg-orange-300 hover:outline-orange-400 hover:outline-none hover:outline-4 p-3 rounded-lg" type="submit"/>
                 </form>

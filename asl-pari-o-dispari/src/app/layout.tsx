@@ -5,8 +5,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Portale ASL Pari o Dispari',
-  description: 'Portale ASL per la gestione degli utenti e attività di approvazione dei menu.',
+  title: 'Portale AUSL Pari o Dispari',
+  description: 'Portale AUSL per la gestione degli utenti e attività di approvazione dei menu.',
 }
 
 export default function RootLayout({
