@@ -1,0 +1,13 @@
+{
+    "corsmodes":{
+        "public":"cors",
+        "local":"no-cors"
+    },
+    "addresses":{
+        "localapi":"http://localhost:8080",
+        "publicapi":"https://apis-pari-o-dispari.azurewebsites.net"
+    },
+    "inputs":{
+        "MAX_PASSWORD_CHARACTERS": 20
+    }
+}
