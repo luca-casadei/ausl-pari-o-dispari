@@ -1,12 +1,26 @@
-import { useState } from "react";
-
+import {  useEffect, useState } from "react";
 import logo from "../assets/logo.png";
+import { isTokenValid, useAuthContext } from "../functions/contextFunctions";
+import { useNavigate } from "react-router-dom";
 import config from "../config/config.json"
 
-export default function LoginPage({handleLogin}) {
-  
+export default function LoginPage() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate()
+
+  const context = useAuthContext();
+
+  useEffect(()=>{
+    if (localStorage.getItem("email") != "" && localStorage.getItem("token") != ""){
+      isTokenValid(localStorage.getItem("email"),localStorage.getItem("token")).then((result)=>{
+        if(result){
+          context.setContext(localStorage.getItem("email"), localStorage.getItem("token"));
+          navigate("/menu");
+        }
+      })
+    }
+  })
 
   async function handleUsernameChange(e) {
     await setUsername(e.target.value);
@@ -19,12 +33,12 @@ export default function LoginPage({handleLogin}) {
   async function handleSubmit(e){
     e.preventDefault();
     document.getElementById("submitButton").disabled = true;
-    await handleLogin(username,password);
+    await context.onLogin(username,password);
     document.getElementById("submitButton").disabled = false;
   }
 
   return (
-    <div className="flex flex-col p-6 w-screen h-screen items-center">
+    <section className="flex flex-col p-6 w-screen h-screen items-center">
       <div className="rounded-md my-auto md:w-1/2 p-10 bg-orange-50">
         <div className="flex grow flex-col items-center">
           <img
@@ -72,6 +86,6 @@ export default function LoginPage({handleLogin}) {
           </form>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

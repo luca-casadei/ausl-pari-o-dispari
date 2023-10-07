@@ -1,7 +1,8 @@
 {
     "corsmodes":{
         "public":"cors",
-        "local":"no-cors"
+        "local":"no-cors",
+        "urlencoded": "application/x-www-form-urlencoded"
     },
     "addresses":{
         "localapi":"http://localhost:8080",

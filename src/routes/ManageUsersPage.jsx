@@ -1,7 +1,7 @@
 export default function ManageUsersPage(){
     return(
-        <div>
-            
-        </div>
+        <section>
+            UserPage
+        </section>
     )
 }
