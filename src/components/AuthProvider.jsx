@@ -33,9 +33,9 @@ export default function AuthProvider({ children }) {
       method: "POST",
       mode: config.corsmodes.public,
       headers: {
-        "Content-Type": config.corsmodes.urlencoded
+        "Content-Type": config.corsmodes.json
       },
-      body: new URLSearchParams({
+      body: JSON.stringify({
         email: username,
         password: password,
       }),

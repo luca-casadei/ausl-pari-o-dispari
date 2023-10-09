@@ -12,9 +12,9 @@ export function isTokenValid(username, token) {
     method: "POST",
     mode: config.corsmodes.public,
     headers: {
-      "Content-Type": config.corsmodes.urlencoded,
+      "Content-Type": config.corsmodes.json,
     },
-    body: new URLSearchParams({
+    body: JSON.stringify({
       token: token,
     }),
   })

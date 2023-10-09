@@ -1,7 +1,8 @@
 import { Route, Routes } from "react-router-dom";
 import NavBar from "./NavBar";
 import MenuPage from "../routes/MenuPage"
-import ManageUsersPage from "../routes/ManageUsersPage";
+import CookUserPage from "../routes/CookUserPage";
+import UserPage from "../routes/UserPage";
 
 export default function MainLayout() {
   return (
@@ -9,7 +10,8 @@ export default function MainLayout() {
       <NavBar />
       <Routes>
         <Route path="/menu" element={<MenuPage/>}/>
-        <Route path="/utenti" element={<ManageUsersPage/>}/>
+        <Route path="/registracucina" element={<CookUserPage/>}/>
+        <Route path="/registrautente" element={<UserPage/>}/>
       </Routes>
     </main>
   );
